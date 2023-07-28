@@ -1,0 +1,39 @@
+*{
+    font-family: Helvetica;
+}
+.table-wrapper{
+    margin: 10px 40px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.fl-table {
+    
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 60%;
+    max-width: 60%;
+    white-space: nowrap;
+    background-color: white;
+    
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 14px;
+}
+
+.fl-table td {
+    border-right: 1px solid #F4F0E0;
+    font-size: 14px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #02100c;
+}
+
+

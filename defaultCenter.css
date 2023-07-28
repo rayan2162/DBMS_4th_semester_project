@@ -1,0 +1,43 @@
+*{
+    font-family: Helvetica;
+    text-align: center;
+}
+body{
+    margin: 0%;
+}
+/* Default Heading */
+h1 {
+    font-size: 80px;
+  }
+
+/* default div container */
+.container {
+    max-width: 80%;
+    padding: 35px;
+    margin: auto;
+  }
+  
+  /* Input form */
+  input {
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 50%;
+    margin: 1px auto;
+    padding: 7px;
+    font-size: 15px;
+  }
+  
+  /* button */
+  .btn{
+        
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        padding: 7px;
+        text-align: left;
+        display: inline-block;
+        font-size: 19px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+  

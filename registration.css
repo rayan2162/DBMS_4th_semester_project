@@ -1,0 +1,69 @@
+*{
+    font-family: Helvetica;
+    text-align: center;
+}
+
+
+body{
+    margin: 0%;
+}
+
+
+h1 {
+    font-size: 80px;   
+}
+
+
+/* Top Namvigation menu */
+.topnav {
+    overflow: hidden;
+}
+
+
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.topnav a:hover {
+    background-color: #060505;
+    color: white;
+
+}
+
+
+/* Default div container */
+.container {
+    max-width: 80%;
+    padding: 35px;
+    margin: auto;
+}
+  
+/* Input form */
+input {
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 40%;
+    margin: 1px auto;
+    padding: 7px;
+    font-size: 18px;
+}
+
+/* button */
+.btn{
+        
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    padding: 7px 20px;
+    text-align: left;
+    display: inline-block;
+    font-size: 19px;
+    cursor: pointer;
+    font-weight: 600;
+}

@@ -1,0 +1,33 @@
+*{
+    font-family:Helvetica;
+}
+body{
+  margin: 0%;
+}
+.topnav .logout{
+    float: right;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+  }
+  .topnav {
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+  }
+  
+  .topnav a:hover {
+    background-color: #060505;
+    color: white;
+  }
