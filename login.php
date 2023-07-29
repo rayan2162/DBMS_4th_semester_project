@@ -19,8 +19,10 @@
 <body>
 
     <div class="topnav">
-        <a href="login.html">Login</a>
-        <a href="registration.html">Registration</a>
+
+        <a href="login.php">Login</a>
+        <a href="registration.php">Registration</a>
+        
     </div>
 
     <div class="container">

@@ -19,17 +19,17 @@
 
 <body>
 
-    <div class="topnav">
+<div class="topnav">
 
-        <a href="courseProfile.php">Course Profile</a>
-        <a href="allDepartment.php">All department</a>
-        <a href="createDepartment.php">Create Department</a>
-        <a href="allUser.html">All Admin</a>
-        <a href="reg.php">Approve</a>
+<a href="courseProfile.php">Course Profile</a>
+<a href="allDepartment.php">All department</a>
+<a href="createDepartment.php">Create Department</a>
+<a href="allUser.php">All Admin</a>
+<a href="approveList.php">Approve</a>   
 
-        <a href="" class="logout">Logout</a>
+<a href="logout.php" class="logout">Logout</a>
 
-    </div>
+</div>
 
     <br>
     <h1>Create Department</h1>

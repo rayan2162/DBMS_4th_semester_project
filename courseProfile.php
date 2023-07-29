@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="topNav.css">
 
-    <title>Document</title>
+    <title>Course Profile</title>
 
 </head>
 <body>
@@ -22,17 +22,22 @@
 <a href="courseProfile.php">Course Profile</a>
 <a href="allDepartment.php">All department</a>
 <a href="createDepartment.php">Create Department</a>
-<a href="allUser.html">All Admin</a>
-<a href="reg.php">Approve</a>   
+<a href="allUser.php">All Admin</a>
+<a href="approveList.php">Approve</a>   
 
-<a href="" class="logout">Logout</a>
+<a href="logout.php" class="logout">Logout</a>
 
 </div>
 
     <h1>course profile</h1>
 
-    <span>Welcome, <?php echo $_SESSION['userName'];?></span> 
-    <span><?php echo $_SESSION['role'];?></span>
+    <span>
+        Welcome, <?php echo $_SESSION['userName'];?>
+    </span>
+
+    <span>
+        <?php echo $_SESSION['role'];?>
+    </span>
     <br>    
 
 </body>

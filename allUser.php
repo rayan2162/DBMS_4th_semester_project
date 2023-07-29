@@ -1,4 +1,7 @@
-<?php include 'connection.php'; ?>
+<?php include 'connection.php'?>
+<?php session_start();?>
+<?php include 'isLoggedin.php';?>
+
 <?php 
     $s = "select * from user";
     $q = mysqli_query($conn, $s);
@@ -20,15 +23,16 @@
 
 </head>
 <body>
+    
 <div class="topnav">
 
 <a href="courseProfile.php">Course Profile</a>
 <a href="allDepartment.php">All department</a>
 <a href="createDepartment.php">Create Department</a>
-<a href="allUser.html">All Admin</a>
-<a href="reg.php">Approve</a>   
+<a href="allUser.php">All Admin</a>
+<a href="approveList.php">Approve</a>   
 
-<a href="" class="logout">Logout</a>
+<a href="logout.php" class="logout">Logout</a>
 
 </div>
 
