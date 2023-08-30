@@ -1,6 +1,7 @@
 <?php include 'connection.php'?>
 <?php session_start();?>
 <?php include 'isLoggedin.php';?>
+<?php include 'sAdmincheck.php';?>
 
 <?php 
     $dept_Id = $_REQUEST['deptId'];

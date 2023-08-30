@@ -1,8 +1,10 @@
 <?php include 'connection.php'; ?>
 <?php 
    $deptId =  $_REQUEST['deptId'];
-   $s = "delete from department where deptId=$deptId";
-   if(mysqli_query($conn, $s)){
+   
+   $dept = "UPDATE `user` SET `deptId`=NULL WHERE `user`.`deptId` =$deptId";
+   $s = "DELETE FROM `department` WHERE `department`.`deptId` =$deptId";
+   if(mysqli_query($conn, $dept, $s)){
     header('Location: allDepartment.php');
    }
 ?>

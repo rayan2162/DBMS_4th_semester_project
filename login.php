@@ -32,7 +32,7 @@
 
         <form action="" method="post">
 
-            <input type="id" name="userId" id="userId" placeholder="Enter Your ID">
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
             <br><br>
 
             <input type="password" name="password" id="password" placeholder="password">
@@ -53,10 +53,10 @@
 <?php
     if(isset($_POST['login'])){
 
-        $userId = $_POST['userId'];
+        $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $s = "SELECT * FROM user WHERE userId ='".$userId."' AND password = '".$password."'";
+        $s = "SELECT * FROM user WHERE email ='".$email."' AND password = '".$password."'";
 
         $q = mysqli_query($conn,$s);
         $row = mysqli_fetch_assoc($q);
@@ -64,12 +64,18 @@
         if($row){
 
             $userStatus = $row['userStatus'];
+            $role = $row['role'];
 
             if($userStatus){
                 $_SESSION['userName'] = $row['userName'];
                 $_SESSION['role']= $row['role'];
-
-                header('location:courseProfile.php');
+                if($role=="admin"){
+                   header('location:dashboard.php'); 
+                }
+                else{
+                    header('location:superAdminDashboard.php');
+                }
+                
             }
         }
     }

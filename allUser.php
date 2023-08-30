@@ -1,9 +1,19 @@
 <?php include 'connection.php'?>
 <?php session_start();?>
 <?php include 'isLoggedin.php';?>
+<?php include 'sAdmincheck.php';?>
+<?php
+$s= "SELECT * FROM user";
+$q = mysqli_query($conn,$s);
+$rs = mysqli_fetch_assoc($q);
+$role = $rs['role'];
+if($role=="admin"){
+    header('location:dashboard.php'); 
+}
+?>
 
 <?php 
-    $s = "select * from user";
+    $s = "select * from user where userStatus=true ";
     $q = mysqli_query($conn, $s);
 ?>
 <!DOCTYPE html>
@@ -25,8 +35,8 @@
 <body>
     
 <div class="topnav">
-
-<a href="courseProfile.php">Course Profile</a>
+<a href="superAdminDashboard.php">Dashboard</a>
+<a href="allCourse.php">Course Profile</a>
 <a href="allDepartment.php">All department</a>
 <a href="createDepartment.php">Create Department</a>
 <a href="allUser.php">All Admin</a>
@@ -51,23 +61,23 @@
                 <?php 
                     while($r = mysqli_fetch_array($q)){ ?>
                         <tr>
-                            <td><?php echo $r['userId'] ?></td>
+                            <td><?php echo $r['UserSn'] ?></td>
                             <td><?php echo $r['userName'] ?></td>
                             <td><?php echo $r['email'] ?></td>
                             <td><?php echo $r['phone'] ?></td>
                             <td><?php echo $r['deptId'] ?></td>
 
                             <td>
-                                <a class="btn btn-secondary" href="editUser.php?userId=<?php echo $r['userId'] ?>">
+                                <a class="btn btn-secondary" href="editUser.php?UserSn=<?php echo $r['UserSn'] ?>">
                                     Edit
                                 </a>
 
-                                <a class="btn btn-danger" data-toggle="modal" data-target="#myModal<?php echo $r['userId'] ?>" >
+                                <a class="btn btn-danger" data-toggle="modal" data-target="#myModal<?php echo $r['UserSn'] ?>" >
                                     Delete
                                 </a>
 
 
-                                <div class="modal" id="myModal<?php echo $r['userId'] ?>">
+                                <div class="modal" id="myModal<?php echo $r['UserSn'] ?>">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
 
@@ -85,7 +95,7 @@
                                         <!-- Modal footer -->
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <a href="deleteUser.php?userId=<?php echo $r['userId'] ?>" class="btn btn-danger">Yes</a>
+                                            <a href="deleteUser.php?UserSn=<?php echo $r['UserSn'] ?>" class="btn btn-danger">Yes</a>
                                         </div>
 
                                         </div>

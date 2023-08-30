@@ -1,10 +1,11 @@
 <?php include 'connection.php'?>
 <?php session_start();?>
 <?php include 'isLoggedin.php';?>
+<?php include 'sAdmincheck.php';?>
 
 <?php 
-    $user_Id = $_REQUEST['userId'];
-    $s = "SELECT * FROM user WHERE userId=$user_Id";
+    $UserSn = $_REQUEST['UserSn'];
+    $s = "SELECT * FROM user WHERE UserSn=$UserSn";
     $q = mysqli_query($conn, $s);
     $r = mysqli_fetch_assoc($q);
 ?>
@@ -37,13 +38,6 @@
         <h2>Edit Admin</h2>
 
         <form action="" method="post">
-
-            <!-- <div class="form-group">
-
-                <label for="">User ID</label>
-                <input type="text" value="<?php echo $r['userId'] ?>" class="form-control" name="userId" id="">
-            
-            </div> -->
 
             <div class="form-group">
                 
@@ -89,13 +83,13 @@
 <?php 
     if(isset($_POST['submitBtn'])){
 
-        $user_Id = $_REQUEST['userId'];
+        $UserSn = $_REQUEST['UserSn'];
         $user_name = $_POST['userName'];
         $user_email = $_POST['email'];
         $user_phone = $_POST['phone'];
         $dept_id = $_POST['deptId'];
 
-        $str = "update user set userName='".$user_name."', email='".$user_email."', phone='".$user_phone."', deptId='".$dept_id."' where userId= $user_Id";
+        $str = "update user set userName='".$user_name."', email='".$user_email."', phone='".$user_phone."', deptId='".$dept_id."' where UserSn= $UserSn";
 
         if(mysqli_query($conn, $str)){
            header('Location: allUser.php');

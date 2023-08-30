@@ -24,7 +24,7 @@ h1 {
     width: 50%;
     margin: 1px auto;
     padding: 7px;
-    font-size: 15px;
+    font-size: 10px;
   }
   
   /* button */
@@ -36,7 +36,7 @@ h1 {
         padding: 7px;
         text-align: left;
         display: inline-block;
-        font-size: 19px;
+        font-size: 20px;
         cursor: pointer;
         font-weight: 600;
     }

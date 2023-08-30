@@ -1,6 +1,7 @@
 <?php include 'connection.php'?>
 <?php session_start();?>
 <?php include 'isLoggedin.php';?>
+<?php include 'sAdmincheck.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,14 +13,14 @@
 
     <link rel="stylesheet" href="topNav.css">
 
-    <title>Course Profile</title>
+    <title>Welcome Super Admin</title>
 
 </head>
 <body>
 
 <div class="topnav">
-
-<a href="courseProfile.php">Course Profile</a>
+<a href="superAdminDashboard.php">Dashboard</a>
+<a href="allCourse.php">Course Profile</a>
 <a href="allDepartment.php">All department</a>
 <a href="createDepartment.php">Create Department</a>
 <a href="allUser.php">All Admin</a>
@@ -28,9 +29,9 @@
 <a href="logout.php" class="logout">Logout</a>
 
 </div>
-
-    <h1>course profile</h1>
-
+<br>
+    <h1>Dashboard</h1>
+<br>
     <span>
         Welcome, <?php echo $_SESSION['userName'];?>
     </span>

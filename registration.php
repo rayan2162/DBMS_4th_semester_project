@@ -26,13 +26,10 @@
     </div>
 
     <div class="container">
-
+<br>
         <h1>Registration</h1>
-
+<br>
     <form action="" method="post">
-                
-                <input type="text" name="userId" class="form-control" id="" placeholder="Enter your ID">
-                <br>
                 
                 <input type="text" name="userName" class="form-control" id="" placeholder="Enter your name">
                 <br>
@@ -83,7 +80,6 @@
 <?php 
     if(isset($_POST['btnRegister'])){
 
-        $userId = $_POST['userId'];
         $userName = $_POST['userName'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
@@ -95,8 +91,8 @@
 
             $password = md5($password);
 
-            $s = "INSERT INTO user(userId, userName, email, phone, deptId ,password, role, userStatus) 
-                  values ('".$userId."','".$userName."','".$email."','".$phone."', '".$deptId."', '".$password."','admin','0')";
+            $s = "INSERT INTO user(userName, email, phone, deptId ,password, role, userStatus) 
+                  values ('".$userName."','".$email."','".$phone."', '".$deptId."', '".$password."','admin','0')";
 
             if(mysqli_query($conn, $s)){
 

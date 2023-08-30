@@ -1,6 +1,7 @@
 <?php include 'connection.php' ?>
 <?php session_start(); ?>
 <?php include 'isLoggedin.php'; ?>
+<?php include 'sAdmincheck.php';?>
 
 <?php 
     $s = "select * from user where userStatus=0";
@@ -21,8 +22,8 @@
 <body>
 
 <div class="topnav">
-
-<a href="courseProfile.php">Course Profile</a>
+<a href="superAdminDashboard.php">Dashboard</a>
+<a href="allCourse.php">Course Profile</a>
 <a href="allDepartment.php">All department</a>
 <a href="createDepartment.php">Create Department</a>
 <a href="allUser.php">All Admin</a>
@@ -45,11 +46,11 @@
                 <?php 
                     while($r = mysqli_fetch_assoc($q)){ ?>
                         <tr>
-                            <td><?php echo $r['userId'] ?></td>
+                            <td><?php echo $r['UserSn'] ?></td>
                             <td><?php echo $r['userName'] ?></td>
                             <td><?php echo $r['email'] ?></td>
                             <td>
-                                <a href="approve.php?userId=<?php echo $r['userId'] ?>">Approve</a>
+                                <a href="approve.php?UserSn=<?php echo $r['UserSn'] ?>">Approve</a>
                             </td>
                         </tr>
                     <?php }

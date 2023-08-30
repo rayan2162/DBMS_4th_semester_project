@@ -1,7 +1,7 @@
 <?php include 'connection.php'?>
 <?php session_start();?>
 <?php include 'isLoggedin.php';?>
-
+<?php include 'sAdmincheck.php';?>
 
 <?php 
     $s = "select * from department";
@@ -31,8 +31,8 @@
 <body>
 
 <div class="topnav">
-
-<a href="courseProfile.php">Course Profile</a>
+<a href="superAdminDashboard.php">Dashboard</a>
+<a href="allCourse.php">Course Profile</a>
 <a href="allDepartment.php">All department</a>
 <a href="createDepartment.php">Create Department</a>
 <a href="allUser.php">All Admin</a>
@@ -71,34 +71,7 @@
                                     Edit
                                 </a>
 
-                                <a class="btn btn-danger" data-toggle="modal" data-target="#myModal<?php echo $r['deptId'] ?>" >
-                                    Delete
-                                </a>
-
-                                <div class="modal" id="myModal<?php echo $r['deptId'] ?>">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-
-                                            <!-- Modal Header -->
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Delete Confirmation</h4>
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            </div>
-
-                                            <!-- Modal body -->
-                                            <div class="modal-body">
-                                                Are you sure you want to delete <?php echo $r['deptName'] ?>
-                                            </div>
-
-                                            <!-- Modal footer -->
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <a href="deleteDepartment.php?deptId=<?php echo $r['deptId'] ?>" class="btn btn-danger">Yes</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </td>
                         </tr>
                     <?php }
